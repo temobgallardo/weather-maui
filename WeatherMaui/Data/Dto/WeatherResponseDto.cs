@@ -24,7 +24,7 @@ public partial class WeatherResponseDto
     public long Visibility { get; set; }
 
     [JsonProperty("wind")]
-    public Wind Wind { get; set; }
+    public WindDto Wind { get; set; }
 
     [JsonProperty("clouds")]
     public CloudsDto Clouds { get; set; }
@@ -123,7 +123,7 @@ public partial class WeatherDto
     public string Icon { get; set; }
 }
 
-public partial class Wind
+public partial class WindDto
 {
     [JsonProperty("speed")]
     public double Speed { get; set; }
