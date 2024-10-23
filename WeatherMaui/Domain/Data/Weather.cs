@@ -1,16 +1,16 @@
 namespace WeatherMaui.Domain.Data;
 
-public class Weather
+public record class Weather
 {
-  public string City { get; set; }
-  public string Country { get; set; }
-  public long Visibility { get; set; }
-  public long Timezone { get; set; }
-  public string Name { get; set; }
-  public double Temp { get; set; }
-  public double FeelsLike { get; set; }
-  public double TempMin { get; set; }
-  public double TempMax { get; set; }
-  public long Pressure { get; set; }
-  public long Humidity { get; set; }
+  public string City { get; init; }
+  public string Country { get; init; }
+  public double FeelsLike { get; init; }
+  public long Humidity { get; init; }
+  public string Name { get; init; }
+  public long Pressure { get; init; }
+  public double Temp { get; init; }
+  public double TempMin { get; init; }
+  public double TempMax { get; init; }
+  public long Timezone { get; init; }
+  public long Visibility { get; init; }
 }
