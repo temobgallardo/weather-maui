@@ -1,9 +1,8 @@
 ﻿using Microsoft.Extensions.Logging;
 using UraniumUI;
+using WeatherMaui.Dependencies;
 
 namespace WeatherMaui;
-
-String apikey = "15c08d55dca35af18244780fa1a0f047";
 
 public static class MauiProgram
 {
@@ -14,6 +13,7 @@ public static class MauiProgram
 		.UseMauiApp<App>()
 		.UseUraniumUI()
 		.UseUraniumUIMaterial()
+		.CreateDependencyGraph()
 		.ConfigureFonts(fonts =>
 		{
 			fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
