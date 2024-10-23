@@ -1,5 +1,4 @@
 using System.Globalization;
-using System.Text.Json.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
@@ -15,25 +14,25 @@ public partial class WeatherResponseDto
     public List<WeatherDto>? Weather { get; set; }
 
     [JsonProperty("base")]
-    public string Base { get; set; }
+    public string? Base { get; set; }
 
     [JsonProperty("main")]
-    public MainDto Main { get; set; }
+    public MainDto? Main { get; set; }
 
     [JsonProperty("visibility")]
     public long Visibility { get; set; }
 
     [JsonProperty("wind")]
-    public WindDto Wind { get; set; }
+    public WindDto? Wind { get; set; }
 
     [JsonProperty("clouds")]
-    public CloudsDto Clouds { get; set; }
+    public CloudsDto? Clouds { get; set; }
 
     [JsonProperty("dt")]
     public long Dt { get; set; }
 
     [JsonProperty("sys")]
-    public SysDto Sys { get; set; }
+    public SysDto? Sys { get; set; }
 
     [JsonProperty("timezone")]
     public long Timezone { get; set; }
@@ -42,7 +41,7 @@ public partial class WeatherResponseDto
     public long Id { get; set; }
 
     [JsonProperty("name")]
-    public string Name { get; set; }
+    public string? Name { get; set; }
 
     [JsonProperty("cod")]
     public long Cod { get; set; }
@@ -99,7 +98,7 @@ public partial class SysDto
     public long Id { get; set; }
 
     [JsonProperty("country")]
-    public string Country { get; set; }
+    public string? Country { get; set; }
 
     [JsonProperty("sunrise")]
     public long Sunrise { get; set; }
@@ -114,13 +113,13 @@ public partial class WeatherDto
     public long Id { get; set; }
 
     [JsonProperty("main")]
-    public string Main { get; set; }
+    public string? Main { get; set; }
 
     [JsonProperty("description")]
-    public string Description { get; set; }
+    public string? Description { get; set; }
 
     [JsonProperty("icon")]
-    public string Icon { get; set; }
+    public string? Icon { get; set; }
 }
 
 public partial class WindDto

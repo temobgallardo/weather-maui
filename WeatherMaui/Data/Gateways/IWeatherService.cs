@@ -1,10 +1,8 @@
 using WeatherMaui.Data.Dto;
 
-namespace WeatherMaui.Data.Connectors;
+namespace WeatherMaui.Data.Gateways;
 
 public interface IWeatherService
 {
-  Task<WeatherResponseDto> GetWeatherByCity(string city);
-  Task<WeatherResponseDto> GetWeatherByCityAndState(string city, string stateCode);
-  Task<WeatherResponseDto> GetWeatherByCityStateAndCountry(string city, string stateCode, string countryCode);
+  Task<WeatherResponseDto> GetWeatherByCityStateAndCountry(string cityStateCodeOrCountryCode);
 }

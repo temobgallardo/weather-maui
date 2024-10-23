@@ -1,7 +1,4 @@
-﻿using Android.App;
-using Android.Runtime;
-
-namespace WeatherMaui;
+﻿namespace WeatherMaui;
 
 [Application]
 public class MainApplication : MauiApplication

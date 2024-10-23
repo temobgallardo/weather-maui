@@ -1,8 +1,8 @@
-using WeatherMaui.Data.Dto;
+using WeatherMaui.Domain.Data;
 
 namespace WeatherMaui.Domain;
 
 public interface IWeatherRepository
 {
-  Task<WeatherDto> GetWeather(string request);
+  Task<Weather> GetWeather(string request);
 }

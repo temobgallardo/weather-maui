@@ -16,21 +16,7 @@ public class WeatherService : IWeatherService
     BaseAddress = new Uri(BASE_URL)
   };
 
-  public async Task<WeatherResponseDto> GetWeatherByCity(string city)
-  {
-    return GetWeatherInternal(city);
-  }
-
-  public async Task<WeatherResponseDto> GetWeatherByCityAndState(string city, string stateCode)
-  {
-    var request = $"{city},{stateCode}";
-    return GetWeatherInternal(request);
-  }
-  public async Task<WeatherResponseDto> GetWeatherByCityStateAndCountry(string city, string stateCode, string countryCode)
-  {
-    var request = $"{city},{stateCode},{countryCode}";
-    return GetWeatherInternal(request);
-  }
+  public async Task<WeatherResponseDto> GetWeatherByCityStateAndCountry(string cityStateCodeOrCountryCode) => GetWeatherInternal(cityStateCodeOrCountryCode);
 
   // TODO: Log request
   private static async Task<WeatherResponseDto> GetWeather(string request)
