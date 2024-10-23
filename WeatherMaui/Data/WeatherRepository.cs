@@ -5,7 +5,7 @@ using WeatherMaui.Domain.Data;
 
 namespace WeatherMaui.Data;
 
-public class WeatherRepository(IWeatherService weatherRepository) : IWeatherRepository
+public class WeatherRepository(IWeatherGateway weatherRepository) : IWeatherRepository
 {
   public async Task<Weather> GetWeather(string request)
   {
