@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 using UraniumUI;
+using Weather.Dependencies;
 
 namespace Weather
 {
@@ -12,6 +13,7 @@ namespace Weather
         .UseMauiApp<App>()
         .UseUraniumUI()
         .UseUraniumUIMaterial()
+        .CreateDependencyGraph()
         .ConfigureFonts(fonts =>
         {
           fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
